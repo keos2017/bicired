@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,27 @@ public class MainActivity extends AppCompatActivity {
                 String email, password;
                 email = mCorreo.getText().toString();
                 password = mClave.getText().toString();
+
+
+                if(TextUtils.isEmpty(email)) {
+                    Toast.makeText(MainActivity.this, "El campo correo no puede estar vacio.",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)) {
+                    Toast.makeText(MainActivity.this, "El campo password no puede estar vacio..",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(password.length() <= 5) {
+                    Toast.makeText(MainActivity.this, "La contraseña ingresada es demasiada corta.",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override

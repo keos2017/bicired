@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegistrarNuevo extends AppCompatActivity {
 
@@ -47,6 +51,43 @@ public class RegistrarNuevo extends AppCompatActivity {
                 String email, password;
                 email = mCorreo.getText().toString();
                 password = mClave.getText().toString();
+
+                //Patrón validar el email
+                Pattern patternEmail = Pattern
+                        .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+                Matcher matcherEmail = patternEmail.matcher(email);
+
+                //Patrón para validar contraseña segura
+                Pattern patternClave = Pattern
+                        .compile("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\{4,}$");
+                Matcher matcherClave = patternClave.matcher(password);
+
+
+                if(TextUtils.isEmpty(email)) {
+                    Toast.makeText(RegistrarNuevo.this, "El campo correo no puede estar vacio.",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(!matcherEmail.find()) {
+                    Toast.makeText(RegistrarNuevo.this, "Ingrese un correo válido.",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)) {
+                    Toast.makeText(RegistrarNuevo.this, "El campo password no puede estar vacio.",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (!matcherClave.find())
+                {
+                    Toast.makeText(RegistrarNuevo.this, "Ingrese una clave segura (1 mayus, 1 minus, 1 número, 4 caracteres minimo.",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(RegistrarNuevo.this, new OnCompleteListener<AuthResult>() {
                             @Override
