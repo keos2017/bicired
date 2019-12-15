@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "351008777972",
+    "firebase_url": "https://bici-red.firebaseio.com",
+    "project_id": "bici-red",
+    "storage_bucket": "bici-red.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351008777972:android:249b18d6721c0f17d4e0a1",
+        "android_client_info": {
+          "package_name": "com.example.bicired"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351008777972-f9vv5a208ovu1534fu7dh4fq7v9us0nk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bicired",
+            "certificate_hash": "90ee4e2e6260f7d5d08e97bed07200fe888ba9e3"
+          }
+        },
+        {
+          "client_id": "351008777972-qpugvgotfovmlspadut2g4sp51ib0500.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3uPmbb5Bncl_sMZbpfxO5LIX1BUMeV_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351008777972-qpugvgotfovmlspadut2g4sp51ib0500.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
