@@ -21,7 +21,7 @@ public class InicioSesionExitoso extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_sesion_exitoso);
 
-        btn_cerrar = (Button) findViewById(R.id.btn_registre);
+        btn_cerrar = (Button) findViewById(R.id.btn_cerrar_sesion);
 
         btn_cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
