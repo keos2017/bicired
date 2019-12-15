@@ -35,10 +35,10 @@ public class RegistrarNuevo extends AppCompatActivity {
         //Firebase
         mAuth = FirebaseAuth.getInstance();
 
-        mIniciarsesion = (TextView) findViewById(R.id.txt_registro);
+        mIniciarsesion = (TextView) findViewById(R.id.txt_inicio_sesion);
         mCorreo        = (EditText) findViewById(R.id.txt_correo);
         mClave         = (EditText) findViewById(R.id.txt_password);
-        mRegister      = (Button) findViewById(R.id.btn_registro);
+        mRegister      = (Button) findViewById(R.id.btn_register);
 
 
         mRegister.setOnClickListener(new View.OnClickListener() {

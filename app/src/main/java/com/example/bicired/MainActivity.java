@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRegister = (TextView) findViewById(R.id.txt_register);
+        mRegister = (TextView) findViewById(R.id.txt_inicio_sesion);
         mCorreo = (EditText) findViewById(R.id.txt_correo);
         mClave = (EditText) findViewById(R.id.txt_password);
         mInicioSesion = (Button) findViewById(R.id.btn_password);

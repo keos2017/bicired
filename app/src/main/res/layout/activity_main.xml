@@ -34,11 +34,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginRight="99dp"
-        android:layout_marginBottom="123dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginRight="98dp"
+        android:layout_marginBottom="18dp"
         android:ems="10"
         android:hint="Ingrese Su Clave"
         android:inputType="textPassword" />
@@ -63,7 +63,7 @@
         android:id="@+id/txt_o"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/txt_register"
+        android:layout_above="@+id/txt_inicio_sesion"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
@@ -76,7 +76,7 @@
         android:text="Ó" />
 
     <TextView
-        android:id="@+id/txt_register"
+        android:id="@+id/txt_inicio_sesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
