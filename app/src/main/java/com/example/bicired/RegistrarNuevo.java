@@ -59,7 +59,7 @@ public class RegistrarNuevo extends AppCompatActivity {
 
                 //Patrón para validar contraseña segura
                 Pattern patternClave = Pattern
-                        .compile("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\{4,}$");
+                        .compile("^(?=\\w*\\d)(?=\\w*[A-Z])(?=\\w*[a-z])\\S{4,}$");
                 Matcher matcherClave = patternClave.matcher(password);
 
 
