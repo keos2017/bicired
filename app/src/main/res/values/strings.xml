@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BICI RED</string>
+    <string name="default_notification_channel_id" translatable="false">default_channel</string>
+
 </resources>
