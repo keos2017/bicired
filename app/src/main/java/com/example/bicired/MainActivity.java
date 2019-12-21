@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Button   mInicioSesion;
     //Variable FireBase
     private FirebaseAuth mAuth;
+    private TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         mCorreo = (EditText) findViewById(R.id.txt_correo);
         mClave = (EditText) findViewById(R.id.txt_password);
         mInicioSesion = (Button) findViewById(R.id.btn_password);
+
+        textView = (TextView) findViewById(R.id.textWiewToken);
+        textView.setText(SharedprefManager.getInstance(this).getToken());
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();

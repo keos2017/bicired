@@ -91,4 +91,10 @@
         android:layout_marginBottom="44dp"
         android:text="Registrarme" />
 
+    <TextView
+        android:id="@+id/textWiewToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Token"/>
+
 </RelativeLayout>
