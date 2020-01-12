@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenManager;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -32,15 +35,16 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = " ";
     TextView mRegister;
     EditText mCorreo, mClave;
-    Button   mInicioSesion;
+    Button mInicioSesion;
     //Variable FireBase
     private FirebaseAuth mAuth;
 
     //Firebase Autenticación Google
 
     GoogleSignInClient mGoogleSignInClient;
-    SignInButton  signinbutton;
+    SignInButton signinbutton;
     private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,8 +61,25 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
+        //Facebook
+    /*    if (AccessToken.getCurrentAccessToken() == null) {
+            goLoginScreen();
+        }
+    }
+    private void goLoginScreen() {
+        Intent intent = new Intent(this, LoginManager.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+    public void logout(View view) {
+        LoginManager.getInstance().logOut();
+        goLoginScreen();
+    }
+    */
+
         // Configure Google Sign In
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+    GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
@@ -74,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         //
         mInicioSesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,19 +105,19 @@ public class MainActivity extends AppCompatActivity {
                 password = mClave.getText().toString();
 
 
-                if(TextUtils.isEmpty(email)) {
+                if (TextUtils.isEmpty(email)) {
                     Toast.makeText(MainActivity.this, "El campo correo no puede estar vacio.",
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if(TextUtils.isEmpty(password)) {
+                if (TextUtils.isEmpty(password)) {
                     Toast.makeText(MainActivity.this, "El campo password no puede estar vacio..",
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if(password.length() <= 5) {
+                if (password.length() <= 5) {
                     Toast.makeText(MainActivity.this, "La contraseña ingresada es demasiada corta.",
                             Toast.LENGTH_SHORT).show();
                     return;
@@ -129,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
                         });
             }
 
+
         });
 
 
@@ -141,9 +164,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
     private void signIn() {
 
     }
+
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -194,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -203,11 +231,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser user) {
-        if(user != null)
-        {
+        if (user != null) {
             Intent intent = new Intent(MainActivity.this, InicioSesionExitoso.class);
             startActivity(intent);
             finish();
         }
+
+
     }
+
+
+
 }
