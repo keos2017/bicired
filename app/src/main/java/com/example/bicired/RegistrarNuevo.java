@@ -94,7 +94,7 @@ public class RegistrarNuevo extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
-                                    Intent intent = new Intent(RegistrarNuevo.this, InicioSesionExitoso.class);
+                                    Intent intent = new Intent(RegistrarNuevo.this, NavDrawer.class);
                                     startActivity(intent);
                                     Toast.makeText(RegistrarNuevo.this, "Registrado Satisfactoriamente.",
                                             Toast.LENGTH_SHORT).show();
