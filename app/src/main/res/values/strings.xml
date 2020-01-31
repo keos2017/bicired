@@ -4,6 +4,9 @@
     <string name="facebook_app_id">490479464929693</string>
     <string name="fb_login_protocol_scheme">fb490479464929693</string>
 
+    <string name="inicio_Sesion_exitiso">Ciclomontañismo en Cundinamarca(pdf)</string>
+    <string name="descarga">Descarga pdf..</string>
+
     <string name="welcome">Bienvenido</string>
     <string name="cancel_login">Se canceló la operación</string>
     <string name="error_login">Ocurrió un error al ingresar</string>
@@ -17,13 +20,17 @@
     <string name="action_settings">Settings</string>
 
     <string name="Explorar">Explorar</string>
-    <string name="Galería">Galería de manuel</string>
+    <string name="Informacion">Rutas MTB Cundinamarca</string>
+    <string name="Galeria">Galería</string>
+    <string name="via_Ferrea">Vía Férrea a Girardot</string>
     <string name="Planear">Planear</string>
     <string name="Perfil">Perfil</string>
     <string name="Cerrar">Cerrar Sesion</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="title_activity_nav_drawer">NavDrawer</string>
+    
+    <string name="descripcion">Descripcion</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

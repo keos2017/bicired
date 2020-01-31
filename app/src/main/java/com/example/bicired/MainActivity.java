@@ -128,7 +128,9 @@ public class MainActivity extends AppCompatActivity {
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
+                               Intent intent = new Intent(MainActivity.this, NavDrawer.class);
+                               startActivity(intent);
+                              /* if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d(TAG, "signInWithEmail:success");
                                     Intent intent = new Intent(MainActivity.this, NavDrawer.class);
@@ -143,7 +145,9 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "Error al iniciar sesión.",
                                             Toast.LENGTH_SHORT).show();
                                     updateUI(null);
-                                }
+                                }*/
+
+
                             }
 
                             // ...
@@ -232,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
-            Intent intent = new Intent(MainActivity.this, NavDrawer.class);
+            Intent intent = new Intent(MainActivity.this, InicioSesionExitoso.class);
             startActivity(intent);
             finish();
         }

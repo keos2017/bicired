@@ -26,23 +26,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-    <Button
-        android:id="@+id/btn_cerrar"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginLeft="145dp"
-        android:layout_marginEnd="138dp"
-        android:layout_marginRight="138dp"
-        android:layout_marginBottom="7dp"
-        android:onClick="logout"
-        android:text="@string/logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
