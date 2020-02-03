@@ -30,6 +30,8 @@ import static java.lang.Thread.sleep;
 public class InicioSesionExitoso extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_cerrar;
+    private Button btn_gps;
+    ImageView imageView;
     //Firebase
     FirebaseAuth mAuth;
 
@@ -41,11 +43,12 @@ public class InicioSesionExitoso extends AppCompatActivity implements View.OnCli
         Log.e("paso por aqui", "oncreate");
 
 
-        ImageView imageView = (ImageView) findViewById(R.id.image_descarga);
+        imageView = findViewById(R.id.image_descarga);
         imageView.setOnClickListener(this);
 
+        btn_gps = findViewById(R.id.btn_gps);
+        btn_cerrar = findViewById(R.id.btn_cerrar_sesion);
 
-        btn_cerrar = (Button) findViewById(R.id.btn_cerrar_sesion);
 
         btn_cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +57,19 @@ public class InicioSesionExitoso extends AppCompatActivity implements View.OnCli
                 startActivity(new Intent(InicioSesionExitoso.this, MainActivity.class));
             }
         });
+
+
+        btn_gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               startActivity(new Intent(InicioSesionExitoso.this, Home.class));
+            }
+        });
+
+
+
+
+
     }
 
     @Override

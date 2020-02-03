@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@mipmap/ic_gps"/>
+
+
+    <item android:id="@+id/menu_profile"
+        android:title="Perfil"
+        android:icon="@mipmap/ic_gps"/>
+
+
+    <item android:id="@+id/menu_gps"
+        android:title="GPS"
+        android:icon="@drawable/ic_icon_gps"/>
+
+
+    <item android:id="@+id/menu_gallery"
+        android:title="Galería"
+        android:icon="@mipmap/ic_gps"/>
+</menu>
