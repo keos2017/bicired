@@ -32,7 +32,7 @@ public class Home extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-                if (menuItem.getItemId() == R.id.menu_profile){
+                if (menuItem.getItemId() == R.id.menu_product){
 
                     showSelectedFragment(new ProfileFragment());
                 }
