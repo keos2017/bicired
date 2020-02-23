@@ -15,9 +15,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.AccessToken;
-import com.facebook.AccessTokenManager;
-import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -42,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
     EditText mCorreo, mClave;
     Button mInicioSesion;
 
-    private RecyclerView recyclerViewProducto;
-    private RecyclerViewAdapatador adapatadorProducto;
+
 
     //Variable FireBase
     private FirebaseAuth mAuth;
@@ -67,11 +63,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textWiewToken);
         textView.setText(SharedprefManager.getInstance(this).getToken());
 
-        recyclerViewProducto=(RecyclerView)findViewById(R.id.recyclerProducto);
-        recyclerViewProducto.setLayoutManager(new LinearLayoutManager(this));
 
-        adapatadorProducto=new RecyclerViewAdapatador(obtenerProducto());
-        recyclerViewProducto.setAdapter(adapatadorProducto);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -259,14 +251,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public List<DescripcionProducto> obtenerProducto(){
-        List<DescripcionProducto> productos=new ArrayList<>();
-        productos.add(new DescripcionProducto("Benotto Marlin","R26 18V.Rojo",R.drawable.Bici1));
-        productos.add(new DescripcionProducto("Helion GT","R27.5, 29.Negro Mate",R.drawable.Bici2));
-        productos.add(new DescripcionProducto("MTB GW JACKAL","R29 18V.Negro Mate | Verde Olivo",R.drawable.Bici3));
-        productos.add(new DescripcionProducto("Conted 3 NEG/BCO(M)","Llantas S-R3 AC, 700*28.Negro|Blanco",R.drawable.Bici4));
 
-        return productos;
-    }
 
 }

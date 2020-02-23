@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/bg_color"
     android:layout_height="match_parent"
     tools:context=".InicioSesionExitoso">
 
@@ -47,7 +48,7 @@
         android:layout_marginTop="465dp"
         android:layout_marginLeft="38dp"
         android:layout_marginRight="38dp"
-        android:text="GPS"/>
+        android:text="Contaćtenos"/>
 
 
 

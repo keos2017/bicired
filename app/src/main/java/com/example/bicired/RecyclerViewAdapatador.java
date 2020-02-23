@@ -15,12 +15,12 @@ import java.util.List;
 public class RecyclerViewAdapatador extends RecyclerView.Adapter<RecyclerViewAdapatador.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView descricion, producto;
+        private TextView descripcion, producto;
         ImageView fotoProducto;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            descricion=(TextView)itemView.findViewById(R.id.tvDescripcion);
+            descripcion=(TextView)itemView.findViewById(R.id.tvDescripcion);
             producto=(TextView)itemView.findViewById(R.id.tvProducto);
             fotoProducto=(ImageView)itemView.findViewById(R.id.imgBici1);
         }
@@ -42,7 +42,7 @@ public class RecyclerViewAdapatador extends RecyclerView.Adapter<RecyclerViewAda
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.descricion.setText(productoLista.get(position).getDescripcion());
+        holder.descripcion.setText(productoLista.get(position).getDescripcion());
         holder.producto.setText(productoLista.get(position).getProducto());
         holder.fotoProducto.setImageResource(productoLista.get(position).getImgProducto());
     }

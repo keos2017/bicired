@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import com.example.bicired.fragments.GalleryFragment;
 import com.example.bicired.fragments.GpsFragment;
 import com.example.bicired.fragments.HomeFragment;
-import com.example.bicired.fragments.ProfileFragment;
+import com.example.bicired.fragments.ProductFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class Home extends AppCompatActivity {
 
                 if (menuItem.getItemId() == R.id.menu_product){
 
-                    showSelectedFragment(new ProfileFragment());
+                    showSelectedFragment(new ProductFragment());
                 }
 
 
